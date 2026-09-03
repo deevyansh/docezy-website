@@ -1,4 +1,4 @@
-const LINKEDIN_URL = "https://www.linkedin.com/";
+const LINKEDIN_URL = "https://www.linkedin.com/in/deevyansh-khadria-325b90240/";
 
 export default function Footer() {
   return (
