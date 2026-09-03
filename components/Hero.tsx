@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-28">
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden pt-28 pb-20 sm:min-h-[90vh] sm:pt-32 sm:pb-24">
       {/* Glow / gradient background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         {/* Base gradient */}
@@ -60,7 +60,7 @@ export default function Hero() {
             "
           >
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-white/25 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            
+
             <span className="relative">Download for Android</span>
             <span className="relative text-2xl leading-none transition-transform duration-300 group-hover:translate-x-1">
               →

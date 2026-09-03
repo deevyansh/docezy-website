@@ -1,3 +1,5 @@
+const LINKEDIN_URL = "https://www.linkedin.com/";
+
 export default function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-white">
@@ -30,6 +32,15 @@ export default function Footer() {
               className="font-medium text-gray-600 transition hover:text-blue-600"
             >
               Google Play
+            </a>
+
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-gray-600 transition hover:text-blue-600"
+            >
+              LinkedIn
             </a>
           </div>
         </div>
