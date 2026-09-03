@@ -80,7 +80,7 @@ export default function Hero() {
 
           {/* Headline with Safari-safe gradient */}
           <h1 className="text-5xl font-extrabold leading-[1.1] tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
-            Your documents.
+            Your Documents.
             <br />
             <span
               className="
