@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const LINKEDIN_URL = "https://www.linkedin.com/";
 
@@ -26,9 +27,19 @@ export default function Navbar() {
         <a
           href="#top"
           onClick={() => setOpen(false)}
-          className="text-xl font-extrabold tracking-tight text-gray-900"
+          className="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-gray-900"
         >
-          Doc<span className="text-blue-600">Ezy</span>
+          <Image
+            src="/logo.png"
+            alt="DocEzy logo"
+            width={32}
+            height={32}
+            priority
+            className="shrink-0 rounded-[9px]"
+          />
+          <span>
+            Doc<span className="text-blue-600">Ezy</span>
+          </span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">

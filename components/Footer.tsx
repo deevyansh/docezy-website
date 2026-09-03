@@ -1,18 +1,29 @@
-const LINKEDIN_URL = "https://www.linkedin.com/in/deevyansh-khadria-325b90240/";
+import Image from "next/image";
+
+const LINKEDIN_URL = "https://www.linkedin.com/";
 
 export default function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-10 sm:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="text-lg font-extrabold text-gray-900">
-              Doc<span className="text-blue-600">Ezy</span>
-            </p>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="DocEzy logo"
+              width={30}
+              height={30}
+              className="shrink-0 rounded-lg"
+            />
+            <div>
+              <p className="text-lg font-extrabold text-gray-900">
+                Doc<span className="text-blue-600">Ezy</span>
+              </p>
 
-            <p className="mt-2 text-sm text-gray-500">
-              Your documents. Instantly found.
-            </p>
+              <p className="mt-1 text-sm text-gray-500">
+                Your documents. Instantly found.
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-6 text-sm">
