@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const LINKEDIN_URL = "https://www.linkedin.com/";
+const YOUTUBE_URL = "https://www.youtube.com/@DocEzy";
 
 const links = [
   { href: "#search", label: "Search" },
@@ -44,6 +45,7 @@ export default function Navbar() {
           </span>
         </a>
 
+        {/* Desktop Menu */}
         <div className="hidden items-center gap-8 md:flex">
           {links.map((link) =>
             link.href.startsWith("/") ? (
@@ -65,6 +67,7 @@ export default function Navbar() {
             )
           )}
 
+          {/* LinkedIn */}
           <a
             href={LINKEDIN_URL}
             target="_blank"
@@ -72,6 +75,16 @@ export default function Navbar() {
             className="text-sm font-medium text-gray-600 transition hover:text-blue-600"
           >
             LinkedIn
+          </a>
+
+          {/* YouTube */}
+          <a
+            href={YOUTUBE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-gray-600 transition hover:text-blue-600"
+          >
+            YouTube
           </a>
 
           <a
@@ -84,6 +97,7 @@ export default function Navbar() {
           </a>
         </div>
 
+        {/* Mobile Menu */}
         <div className="flex items-center gap-2 md:hidden">
           <a
             href="https://play.google.com/store/apps/details?id=com.deevyansh.docezy"
@@ -122,6 +136,7 @@ export default function Navbar() {
         </div>
       </nav>
 
+      {/* Mobile Dropdown */}
       <div
         className={`overflow-hidden border-t border-gray-200/70 bg-white/95 backdrop-blur-xl transition-[max-height] duration-300 ease-in-out md:hidden ${
           open ? "max-h-96" : "max-h-0 border-t-0"
@@ -150,6 +165,7 @@ export default function Navbar() {
             )
           )}
 
+          {/* LinkedIn */}
           <a
             href={LINKEDIN_URL}
             target="_blank"
@@ -158,6 +174,17 @@ export default function Navbar() {
             className="rounded-lg px-3 py-3 text-base font-medium text-gray-700 transition hover:bg-blue-50 hover:text-blue-600"
           >
             LinkedIn
+          </a>
+
+          {/* YouTube */}
+          <a
+            href={YOUTUBE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="rounded-lg px-3 py-3 text-base font-medium text-gray-700 transition hover:bg-blue-50 hover:text-blue-600"
+          >
+            YouTube
           </a>
         </div>
       </div>
