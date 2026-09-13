@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const LINKEDIN_URL = "https://www.linkedin.com/";
 
@@ -9,6 +10,7 @@ const links = [
   { href: "#search", label: "Search" },
   { href: "#how-it-works", label: "How It Works" },
   { href: "#why-docezy", label: "Why DocEzy" },
+  { href: "/safety-security", label: "Safety & Security" },
 ];
 
 export default function Navbar() {
@@ -43,15 +45,25 @@ export default function Navbar() {
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-gray-600 transition hover:text-blue-600"
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.href.startsWith("/") ? (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-gray-600 transition hover:text-blue-600"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-gray-600 transition hover:text-blue-600"
+              >
+                {link.label}
+              </a>
+            )
+          )}
 
           <a
             href={LINKEDIN_URL}
@@ -112,20 +124,31 @@ export default function Navbar() {
 
       <div
         className={`overflow-hidden border-t border-gray-200/70 bg-white/95 backdrop-blur-xl transition-[max-height] duration-300 ease-in-out md:hidden ${
-          open ? "max-h-80" : "max-h-0 border-t-0"
+          open ? "max-h-96" : "max-h-0 border-t-0"
         }`}
       >
         <div className="flex flex-col gap-1 px-4 py-4">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="rounded-lg px-3 py-3 text-base font-medium text-gray-700 transition hover:bg-blue-50 hover:text-blue-600"
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.href.startsWith("/") ? (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="rounded-lg px-3 py-3 text-base font-medium text-gray-700 transition hover:bg-blue-50 hover:text-blue-600"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="rounded-lg px-3 py-3 text-base font-medium text-gray-700 transition hover:bg-blue-50 hover:text-blue-600"
+              >
+                {link.label}
+              </a>
+            )
+          )}
 
           <a
             href={LINKEDIN_URL}

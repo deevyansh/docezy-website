@@ -6,6 +6,7 @@ import HowItWorks from "@/components/HowItWorks";
 import VideoShowcase from "@/components/VideoShowcase";
 import WhyDocEzy from "@/components/WhyDocEzy";
 import Footer from "@/components/Footer";
+import SafeSecurityPage from "@/components/SafetySecurityPage";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <DownloadSection />
         <HowItWorks />
         <VideoShowcase />
+        <SafeSecurityPage />
         <WhyDocEzy />
         <Footer />
       </div>
