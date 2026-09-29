@@ -75,6 +75,12 @@ export default function Footer() {
               >
                 Download
               </Link>
+              <Link 
+                href="/faq"
+                className="text-gray-600 transition hover:text-blue-600"
+              >
+                FAQ
+              </Link>
             </div>
           </div>
 
