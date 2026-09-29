@@ -26,9 +26,28 @@ export const metadata: Metadata = {
   },
 };
 
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DocEzy",
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "Android",
+  "description":
+    "DocEzy is an AI-powered document search app with OCR, multilingual search, fuzzy search, and secure document storage.",
+  "url": "https://www.docezy.in/",
+  "downloadUrl":
+    "https://play.google.com/store/apps/details?id=com.deevyansh.docezy"
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(softwareSchema),
+        }}
+      />
       <div id="top">
         <Navbar />
         <Hero />
